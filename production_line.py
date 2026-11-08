@@ -148,9 +148,9 @@ for product in production_lines:
 
         print(product['ID'],problems)
 
-webhook_09 = 'https://sert333.app.n8n.cloud/webhook/b2dc3a80-1460-4c8b-b14a-69e1656eccfb'
+webhook_09 = 'https://n8n.nextlablogic.com/webhook/b2dc3a80-1460-4c8b-b14a-69e1656eccfb'
 
-webhook_09_dashboard = 'https://sert333.app.n8n.cloud/webhook/4c31c1b6-430e-42c7-9d31-df52c4418c1a'
+webhook_09_dashboard = 'https://n8n.nextlablogic.com/webhook/4c31c1b6-430e-42c7-9d31-df52c4418c1a'
 
 payload = { 'production_lines':production_lines  }
 
