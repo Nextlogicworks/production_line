@@ -12,7 +12,7 @@ def get_factory_data():
 
     for number in range(1, 7):
 
-        line_id = f"R-3{number:02d}"
+        line_id = f"L-2{number:02d}"
 
         planned_units = random.randint(250, 600)
 
