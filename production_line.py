@@ -1,5 +1,14 @@
 import requests
 
+response = requests.get(
+    "http://127.0.0.1:8000/factory",
+    timeout=10
+)
+
+response.raise_for_status()
+
+factory_data = response.json()
+
 production_line_1 = {'ID':'L201','Planned Units':500,'Produced Units':490,'Defective Units':12}
 production_line_2 = {'ID':'L202','Planned Units':450,'Produced Units':425,'Defective Units':22}
 production_line_3 = {'ID':'L203','Planned Units':300,'Produced Units':300,'Defective Units':9}
@@ -10,6 +19,7 @@ production_line_6 = {'ID':'L206','Planned Units':600,'Produced Units':610,'Defec
 
 production_lines = [production_line_1,production_line_2,production_line_3,production_line_4,production_line_5,production_line_6]
 
+production_lines = factory_data [production_lines]
 
 def calculation(units,defects):
     good_units = units - defects
