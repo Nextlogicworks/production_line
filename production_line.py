@@ -19,7 +19,7 @@ production_line_6 = {'ID':'L206','Planned Units':600,'Produced Units':610,'Defec
 
 production_lines = [production_line_1,production_line_2,production_line_3,production_line_4,production_line_5,production_line_6]
 
-production_lines = factory_data [production_lines]
+production_lines = factory_data ["production_lines"]
 
 def calculation(units,defects):
     good_units = units - defects
