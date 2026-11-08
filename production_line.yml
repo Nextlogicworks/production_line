@@ -27,7 +27,7 @@ jobs:
         run: |
           set -e
 
-          python -m uvicorn factory_API:app --host 127.0.0.1 --port 8000 &
+          python -m uvicorn production_line_API:app --host 127.0.0.1 --port 8000 &
           API_PID=$!
           trap 'kill "$API_PID" 2>/dev/null || true' EXIT
 
@@ -42,12 +42,12 @@ jobs:
                       timeout=2
                   )
                   response.raise_for_status()
-                  print("Factory API is ready")
+                  print("Production Line API is ready")
                   break
               except requests.RequestException:
                   time.sleep(1)
           else:
-              raise RuntimeError("Factory API failed to start")
+              raise RuntimeError("Production Line API failed to start")
           PY
 
           python production_line.py
